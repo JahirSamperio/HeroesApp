@@ -10,9 +10,11 @@ export const LoginPage = () => {
 
     const onLogin = () => {
 
+        const lastPath = localStorage.getItem('lastPath') || '/' //El OR es en caso de que no haya una busqueda anterior
+
         login('Jahir A. Samperio')
 
-        navigate('/', {
+        navigate(lastPath, {
             replace: true
         })
     }
